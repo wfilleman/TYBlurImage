@@ -62,9 +62,7 @@ static const BOOL kDownsampleBlurAnimationImage = YES;
 
 - (void)ty_generateBlurFramesWithCompletion:(void(^)())completion
 {
-    if (self.baseImage == nil) {
-        self.baseImage = self.image;
-    }
+    self.baseImage = self.image;
     if (self.baseImage) {
         self.framesArray = [[NSMutableArray alloc] init];
         self.framesReverseArray = [[NSMutableArray alloc] init];
